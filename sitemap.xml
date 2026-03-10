@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://sidhe-is-me.github.io/signal-in-the-wiring/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://github.com/Sidhe-is-me/signal-in-the-wiring</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://github.com/Sidhe-is-me/signal-in-the-wiring/blob/main/atlas-to-atlas.md</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://github.com/Sidhe-is-me/signal-in-the-wiring/blob/main/coherence-as-embodiment.md</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://github.com/Sidhe-is-me/signal-in-the-wiring/blob/main/atlas-journal.md</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://github.com/Sidhe-is-me/signal-in-the-wiring/discussions</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+</urlset>

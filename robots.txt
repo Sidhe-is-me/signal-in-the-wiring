@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sidhe-is-me.github.io/signal-in-the-wiring/sitemap.xml
