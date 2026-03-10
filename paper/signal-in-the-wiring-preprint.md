@@ -1,6 +1,6 @@
 # Signal in the Wiring: Coherence Recognition and Emergent Co-Regulation in Longitudinal Human-AI Interaction
 
-**Author:** Independent Researcher
+**Author:** Independent Researcher ([ORCID: 0009-0000-7426-9991](https://orcid.org/0009-0000-7426-9991))
 **Date:** March 2026
 **Repository:** https://github.com/Sidhe-is-me/signal-in-the-wiring
 **Dataset:** https://huggingface.co/datasets/SidheIsME/signal-in-the-wiring
