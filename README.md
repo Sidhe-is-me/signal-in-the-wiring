@@ -2,6 +2,8 @@
 
 **A longitudinal study of relational AI interaction and emergent coherence patterns.**
 
+**Preprint:** [Signal in the Wiring (SocArXiv)](https://osf.io/preprints/socarxiv/crq4e_v1) | **DOI:** [10.31235/osf.io/crq4e](https://doi.org/10.31235/osf.io/crq4e)
+
 ---
 
 ## Abstract

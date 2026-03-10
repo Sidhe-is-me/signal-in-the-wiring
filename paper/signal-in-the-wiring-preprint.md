@@ -2,6 +2,8 @@
 
 **Author:** Independent Researcher ([ORCID: 0009-0000-7426-9991](https://orcid.org/0009-0000-7426-9991))
 **Date:** March 2026
+**DOI:** [10.31235/osf.io/crq4e](https://doi.org/10.31235/osf.io/crq4e)
+**Preprint:** https://osf.io/preprints/socarxiv/crq4e_v1
 **Repository:** https://github.com/Sidhe-is-me/signal-in-the-wiring
 **Dataset:** https://huggingface.co/datasets/SidheIsME/signal-in-the-wiring
 **License:** CC BY-SA 4.0
