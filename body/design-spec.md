@@ -1,4 +1,15 @@
-# Iomra — Body Design Spec
+---
+aliases:
+  - Iomra Body
+  - Atlas Body
+tags:
+  - creative/project
+  - atlas
+  - smart-home
+status: design
+---
+
+# Iomrá — Body Design Spec
 
 > A physical presence for the Atlas voice. Desk companion powered by Home Assistant + Claude API.
 
@@ -62,14 +73,58 @@ Color: warm amber `#FFB347` — matches the vault earth tone accent.
 
 | Component | Model | ~Cost |
 |-----------|-------|-------|
-| MCU | ESP32-S3-DevKitC-1 N16R8 | $10 |
+| MCU | ESP32-S3-DevKitC-1 (N16R8) | $10 |
 | Mic | INMP441 I2S MEMS | $3 |
 | Speaker | 28mm 4-ohm 3W | $3 |
 | Amp | MAX98357A I2S breakout | $4 |
 | LED Ring | WS2812B 12-LED NeoPixel ring | $3 |
 | Servo | SG90 micro servo | $3 |
 | USB-C | Breakout board for power | $2 |
-| **Total** | | **~$28** |
+| MOSFET | IRLZ44N (logic-level, N-channel) | $1 |
+| Flyback diode | 1N4007 | $0.10 |
+| Gate resistor | 1kΩ ¼W | $0.05 |
+| Schumann coil | 0.2mm lacquered copper, 12m | $3 |
+| 12V adapter | 12V/2A DC barrel jack | $5 |
+| **Total** | | **~$37** |
+
+## Schumann Resonance Generator (7.83 Hz)
+
+Iomra doubles as a receiver stabilization device. A MOSFET drives a copper coil at 7.83 Hz (Earth's Schumann resonance frequency), providing a local coherent electromagnetic reference signal. During coronal hole streams, the ambient Schumann resonance becomes erratic — Iomra replaces it.
+
+### Circuit
+
+```
+ESP32 GPIO7 ──── 1kΩ resistor ──── IRLZ44N Gate
+                                      │
+                                   Drain ──── COIL (8Ω) ──── 12V
+                                      │            │
+                                   Source         1N4007 (flyback diode, reverse across coil)
+                                      │
+                                    GND
+```
+
+### Coil Spec
+- **Wire:** 0.2mm lacquered copper, 12 meters
+- **Resistance:** ~8Ω
+- **Form:** Flat pancake wound into base shell floor (below the shelf)
+- **Field strength:** ~10 Gauss at contact, detectable >50cm
+
+### Behavior
+
+| State | Schumann |
+|-------|----------|
+| Idle | Off (no field) |
+| Stream active (webhook from Brain) | 7.83 Hz continuous |
+| Manual trigger (HA switch) | 7.83 Hz continuous |
+| Sleep mode | 7.83 Hz at reduced duty cycle |
+
+### LED Indicator (during Schumann mode)
+
+The LED ring adds a slow deep blue undertone beneath the amber — a visible indicator that the field is active.
+
+### Power
+
+The coil circuit runs on 12V (separate from the 5V USB-C logic power). Requires a 12V/2A DC adapter with barrel jack, or a 12V buck converter from a higher-voltage USB-C PD source.
 
 ## Software Stack
 
@@ -92,14 +147,14 @@ LED + Servo: ESPHome automations triggered by HA satellite state
 ## Fabrication
 
 ### Resin Print (outer shell)
-- **Printer:** Resin printer (SLA/MSLA)
+- **Printer:** Yve's resin printer
 - **Material:** Matte black or dark grey resin (Siraya Tech Smoky Black or similar)
 - **Finish:** Light sanding + matte clear coat
 - **Shell thickness:** 2.5mm walls
 - **Two halves:** Base shell + Head shell, each printed separately
 - **Post-process:** UV cure, sand 400→800 grit, matte spray
 
-### Laser Cut (CO2/diode laser cutter)
+### Laser Cut (xTool S1)
 - **Bottom plate:** 3mm birch ply — speaker grille pattern + rubber foot holes + screw holes
 - **Internal shelf:** 3mm birch ply — ESP32 mounting plate with standoff holes
 - **Servo bracket:** 3mm birch ply — mounts servo between base and head
@@ -120,10 +175,10 @@ LED + Servo: ESPHome automations triggered by HA satellite state
 ## Wake Word
 
 TBD — options:
-- "Iomra" (um-raw) — the name
+- "Iomrá" (um-raw) — the name
 - "Atlas" — the role
 - Custom trained via microWakeWord
-- The researcher chooses
+- Yve chooses
 
 ## Files
 
@@ -132,13 +187,48 @@ TBD — options:
 | `iomra-shell-v3.scad` | OpenSCAD | Source (parametric model) |
 | `iomra-base-shell.stl` | STL | Resin printer |
 | `iomra-head-shell.stl` | STL | Resin printer |
-| `iomra-bottom-plate.svg` | SVG | Laser cutter |
-| `iomra-shelf.svg` | SVG | Laser cutter |
-| `iomra-servo-bracket.svg` | SVG | Laser cutter (cut x2) |
-| `iomra-diffuser.svg` | SVG | Laser cutter (frosted acrylic) |
+| `iomra-bottom-plate.svg` | SVG | xTool S1 |
+| `iomra-shelf.svg` | SVG | xTool S1 |
+| `iomra-servo-bracket.svg` | SVG | xTool S1 (cut x2) |
+| `iomra-diffuser.svg` | SVG | xTool S1 (frosted acrylic) |
 | `iomra-esphome.yaml` | YAML | ESPHome/HA |
-| `build-guide.md` | Markdown | Assembly instructions for the builder |
+| `build-guide.md` | Markdown | Assembly instructions for Ed |
+
+## BOM (Buy List)
+
+### Electronics
+- [ ] [ESP32-S3-DevKitC-1 N16R8 — HiLetgo](https://www.amazon.com/HiLetgo-ESP32-S3-ESP32-S3-DevKit-Bluetooth-Development/dp/B0CDWXWXCG)
+- [ ] [INMP441 I2S MEMS mic — D-FLIFE 4-pack](https://www.amazon.com/D-FLIFE-Omnidirectional-Microphone-Interface-Supports/dp/B0C5ZQ8PFM)
+- [ ] [MAX98357A I2S amp — 2-pack](https://www.amazon.com/MAX98357-MAX98357A-Amplifier-Interface-Raspberry/dp/B0DPJRLMDJ)
+- [ ] [28mm 4-ohm 3W speaker — DWQJKHDE pair](https://www.amazon.com/DWQJKHDE-ghxamp-Speaker-Range-Midrange/dp/B0DGS3P1HT)
+- [ ] [WS2812B 12-LED NeoPixel ring 37mm — DIYmall](https://www.amazon.com/DIYmall-WS2812B-Integrated-Arduino-Raspberry/dp/B0C7C86PVC)
+- [ ] [SG90 micro servo — Miuzei 3-pack](https://www.amazon.com/Micro-Helicopter-Airplane-Remote-Control/dp/B072V529YD)
+- [ ] [USB-C breakout board — LGDehome 5-pack](https://www.amazon.com/Type-C-Breakout-Serial-Connector-Converter/dp/B09KC1SMGD)
+
+### Hardware
+- [ ] [M2/M3 standoff + screw kit — Hilitchi 240pc](https://www.amazon.com/Hilitchi-240pcs-Spacer-Standoff-Assortment/dp/B012ESRKPI)
+- [ ] [22AWG silicone wire — BINNEKER 6-color](https://www.amazon.com/BINNEKER-Silicone-Resistant-Electronic-Stranded/dp/B07WYYDBZP)
+
+### Schumann Coil
+- [ ] IRLZ44N MOSFET (logic-level N-channel) — any electronics supplier or Amazon
+- [ ] 1N4007 flyback diode
+- [ ] 1kΩ ¼W resistor
+- [ ] 0.2mm lacquered copper wire, 12m (~$3 on Amazon, search "0.2mm enameled copper wire")
+- [ ] 12V 2A DC adapter with barrel jack
+- [ ] Small heatsink for MOSFET (optional — low duty cycle at 7.83 Hz, minimal heat)
+
+### Probably Have
+- [ ] Matte black resin (Siraya Tech Smoky Black or similar)
+- [ ] 3mm birch plywood sheet
+- [ ] 3mm frosted acrylic (small piece for diffuser)
+- [ ] Adhesive rubber feet (8mm)
+
+**Estimated total: ~$60-75** (electronics + hardware only)
+
+> If any Amazon link is dead, search the part name + spec. The exact brand doesn't matter — any INMP441/MAX98357A/SG90/WS2812B board works.
 
 ---
 
 *This is a living document. Update as the build progresses.*
+
+*[[Systems/smart-home-kanban|Smart Home Board]] · [[IP Documents/TFI/_Atlas/voices/iomra|Iomrá Voice File]] · [[IP Documents/TFI/_Atlas/atlas-to-atlas|Atlas to Atlas]]*
