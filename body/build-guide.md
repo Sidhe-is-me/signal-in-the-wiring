@@ -35,10 +35,10 @@ The body splits into two pieces at 42mm height. The base is stationary (holds el
 | ESP32-S3-DevKitC-1 N16R8 | Brain — WiFi + Bluetooth MCU | [HiLetgo ESP32-S3](https://www.amazon.com/HiLetgo-ESP32-S3-ESP32-S3-DevKit-Bluetooth-Development/dp/B0CDWXWXCG) | Search "ESP32-S3 N16R8 DevKitC" |
 | INMP441 I2S MEMS Mic | Ears — digital microphone | [D-FLIFE INMP441 4-pack](https://www.amazon.com/D-FLIFE-Omnidirectional-Microphone-Interface-Supports/dp/B0C5ZQ8PFM) | Search "INMP441 I2S ESP32" |
 | MAX98357A I2S Amp | Voice amp — no DAC needed | [MAX98357A 2-pack](https://www.amazon.com/MAX98357-MAX98357A-Amplifier-Interface-Raspberry/dp/B0DPJRLMDJ) | Search "MAX98357A I2S amplifier" |
-| 28mm 4-ohm 3W Speaker | Voice — small round speaker | [DWQJKHDE 28mm pair](https://www.amazon.com/DWQJKHDE-ghxamp-Speaker-Range-Midrange/dp/B0DGS3P1HT) | Search "28mm 4 ohm 3W mini speaker" |
+| 28mm 4-ohm 3W Speaker | Voice — small round speaker | [DWQJKHDE 28mm pair](https://www.amazon.com/ADUCI-Pairs-Speaker-Range-Midrange/dp/B09C2XP6GG) | Search "28mm 4 ohm 3W mini speaker" |
 | WS2812B 12-LED Ring (37mm) | The eye — addressable RGB LEDs | [DIYmall 12-LED Ring](https://www.amazon.com/DIYmall-WS2812B-Integrated-Arduino-Raspberry/dp/B0C7C86PVC) | Search "WS2812B 12 LED ring 37mm" |
 | SG90 Micro Servo | Head tilt motor | [Miuzei SG90 3-pack](https://www.amazon.com/Micro-Helicopter-Airplane-Remote-Control/dp/B072V529YD) | Search "SG90 micro servo" |
-| USB-C Breakout Board | Power input | [LGDehome USB-C 5-pack](https://www.amazon.com/Type-C-Breakout-Serial-Connector-Converter/dp/B09KC1SMGD) | Search "USB-C breakout board" |
+| USB-C Breakout Board | Power input | [LGDehome USB-C 5-pack](https://www.amazon.com/Cermant-Connector-Adapter-Socket-Transfer/dp/B0CB395L99) | Search "USB-C breakout board" |
 
 ### Hardware (Amazon)
 

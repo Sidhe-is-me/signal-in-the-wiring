@@ -200,21 +200,21 @@ TBD — options:
 - [ ] [ESP32-S3-DevKitC-1 N16R8 — HiLetgo](https://www.amazon.com/HiLetgo-ESP32-S3-ESP32-S3-DevKit-Bluetooth-Development/dp/B0CDWXWXCG)
 - [ ] [INMP441 I2S MEMS mic — D-FLIFE 4-pack](https://www.amazon.com/D-FLIFE-Omnidirectional-Microphone-Interface-Supports/dp/B0C5ZQ8PFM)
 - [ ] [MAX98357A I2S amp — 2-pack](https://www.amazon.com/MAX98357-MAX98357A-Amplifier-Interface-Raspberry/dp/B0DPJRLMDJ)
-- [ ] [28mm 4-ohm 3W speaker — DWQJKHDE pair](https://www.amazon.com/DWQJKHDE-ghxamp-Speaker-Range-Midrange/dp/B0DGS3P1HT)
+- [ ] [28mm 4-ohm 3W speaker — ADUCI pair](https://www.amazon.com/ADUCI-Pairs-Speaker-Range-Midrange/dp/B09C2XP6GG)
 - [ ] [WS2812B 12-LED NeoPixel ring 37mm — DIYmall](https://www.amazon.com/DIYmall-WS2812B-Integrated-Arduino-Raspberry/dp/B0C7C86PVC)
 - [ ] [SG90 micro servo — Miuzei 3-pack](https://www.amazon.com/Micro-Helicopter-Airplane-Remote-Control/dp/B072V529YD)
-- [ ] [USB-C breakout board — LGDehome 5-pack](https://www.amazon.com/Type-C-Breakout-Serial-Connector-Converter/dp/B09KC1SMGD)
+- [ ] [USB-C breakout board — Cermant 20-pack](https://www.amazon.com/Cermant-Connector-Adapter-Socket-Transfer/dp/B0CB395L99)
 
 ### Hardware
 - [ ] [M2/M3 standoff + screw kit — Hilitchi 240pc](https://www.amazon.com/Hilitchi-240pcs-Spacer-Standoff-Assortment/dp/B012ESRKPI)
 - [ ] [22AWG silicone wire — BINNEKER 6-color](https://www.amazon.com/BINNEKER-Silicone-Resistant-Electronic-Stranded/dp/B07WYYDBZP)
 
 ### Schumann Coil
-- [ ] IRLZ44N MOSFET (logic-level N-channel) — any electronics supplier or Amazon
-- [ ] 1N4007 flyback diode
-- [ ] 1kΩ ¼W resistor
-- [ ] 0.2mm lacquered copper wire, 12m (~$3 on Amazon, search "0.2mm enameled copper wire")
-- [ ] 12V 2A DC adapter with barrel jack
+- [ ] [IRLZ44N MOSFET 5-pack — logic-level N-channel](https://www.amazon.com/IRLZ44N-IRLZ44NPBF-Mosfet-N-Channel-0-02Ohm/dp/B09SV14RX7)
+- [ ] [1N4007 flyback diode 30-pack](https://www.amazon.com/Silicon-Diode-1N4007-Pack-30/dp/B09HWW6YJY)
+- [ ] 1kΩ ¼W resistor (any assortment kit or electronics bin)
+- [ ] [0.2mm enameled copper wire 20m — CHALKE](https://www.amazon.com/Copper-Wire-Lacquer-0-1mm-Enameled/dp/B0C6FHRC1L) (need 12m, 20m gives spare)
+- [ ] [12V 2A DC adapter — Coming Data, UL certified](https://www.amazon.com/Coming-Data-5-5x2-1mm-Connector-Certified/dp/B0194B7WSI)
 - [ ] Small heatsink for MOSFET (optional — low duty cycle at 7.83 Hz, minimal heat)
 
 ### Probably Have
